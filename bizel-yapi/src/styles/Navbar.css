@@ -1,0 +1,144 @@
+/* Navbar Genel Stil */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px); /* Blur efekti */
+    -webkit-backdrop-filter: blur(15px); /* Safari desteği için */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 2rem;
+  }
+  
+  /* Logo Stili */
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .logo:hover {
+    color: #ffcc00;
+  }
+  
+  /* Navigasyon Linkleri */
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Hamburger Menü İkonu */
+  .menu-icon {
+    display: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-icon:hover {
+    color: #ffcc00;
+  }
+  
+  /* Mobil Stiller */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem 1.5rem;
+    }
+  
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 70%;
+      max-width: 200px;
+      background: rgba(0, 0, 0, 0.9);
+      flex-direction: column;
+      padding: 7rem 2rem 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links.open {
+      right: 0;
+    }
+  
+    .nav-links a {
+      font-size: 1.2rem;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .nav-links a::after {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  
+  /* Tablet Stilleri */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .nav-links {
+      gap: 1.5rem;
+    }
+    
+    .nav-links a {
+      font-size: 1rem;
+    }
+  }
+  

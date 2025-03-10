@@ -1,16 +1,18 @@
-import React from 'react'
-import Header from './pages/Header'
-import About from './pages/About'
-import Brands from './pages/Brands'
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Product from './pages/Product';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <About />
-      <Brands/>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

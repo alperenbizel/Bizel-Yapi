@@ -30,7 +30,7 @@ function About() {
   }, []);
 
   return (
-    <div ref={aboutRef} className="about-container">
+    <div ref={aboutRef} className="about-container" id="about">
       
       <div className="about-content">
       <h1 className="about-title">Hakkımızda</h1>
