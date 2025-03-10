@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Product.css';
 import products from '../data/products';
-import Navbar from '../components/Navbar'; 
+
 
 
 
@@ -29,7 +29,7 @@ const Products = () => {
 
   return (
   <>
-  <Navbar/>
+ 
     <section className="products-section">
       {/* Filtre Butonları */}
       <div className="filter-buttons">
